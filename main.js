@@ -54,5 +54,5 @@ document.addEventListener("keydown", function(event) {
 
 
 // two different areas for imporvement, 1. the aesthetic & visuals 2. randomness.
-// create three branches for each improvement, meaning total 6 branches.
+// create 3 branches for each improvement, meaning total 6 branches.
 
