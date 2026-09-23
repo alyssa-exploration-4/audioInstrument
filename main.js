@@ -24,7 +24,7 @@ introModal.close();
 
 
 
-// This is the instrument ------------------------ //
+// This is the instrument------------------------ //
 
 // const snapSound = new Audio("sounds/Asnap.mp3");
 
