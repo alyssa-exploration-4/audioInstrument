@@ -164,22 +164,57 @@ button {
     left: 80%;
 }
 
-
+/* ----- trees ---------------------- */
 
 .tree {
     position: absolute;
-    bottom: 90px;
-    }
+    bottom: 180px;
+    left: 80%;
+}
     
-    .tree div {
+.top {
+    width: 0;
+    height: 0;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 40px solid #120d35;
+    
+}
+
+.bottom {
     width: 0;
     height: 0;
     
-    border-left: 25px solid transparent;
-    border-right: 25px solid transparent;
-    border-bottom: 35px solid #120d35;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 60px solid #120d35;
+    
+    position: absolute;
+    top: 25px;
+    left: -20px;
+}
+
+.trunk {
+    width: 12px;
+    height: 25px;
+    
+    background: #120d35;
+    
+    position: absolute;
+    top: 85px;
+    left: 25px;
+}
+
+.tree1 {
+    left: 10%;
+    top: 76.5%;
+    transform: scale(1);
+}
+
+.tree2 {
+    left: 78%;
+    top: 76.5%;
+    transform: scale(1.2);
 }
