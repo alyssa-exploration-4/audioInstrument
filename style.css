@@ -81,12 +81,20 @@ button {
 
 .moon {
     position: absolute;
-    top: 20%;
-    right: 16%;
+    top: 17.5%;
+    right: 11.3%;
     
-    width: 90px;
-    height: 85px;
+    width: 120px;
+    height: 120px;
     
-    background: #f5edd5;
+    background: #fef5d9;
+    border-radius: 50%;
+}
+
+.stars span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
     border-radius: 50%;
 }
