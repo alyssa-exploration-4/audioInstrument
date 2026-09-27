@@ -30,25 +30,55 @@ introModal.close();
 
 
 const starSounds = {
-    a: {
-    sound: "sounds/a_snap.mp3",
-    star: "star-a"
+    q: {
+    sound: "sounds/q.wav",
+    star: "star-q"
     },
 
-    b: {
-    sound: "sounds/b_balloon.mp3",
-    star: "star-b"
-    },
-
-    c: {
-    sound: "sounds/c_chime.mp3",
-    star: "star-c"
+    w: {
+    sound: "sounds/w.wav",
+    star: "star-w"
     },
 
     e: {
-    sound: "sounds/e_elephant.mp3",
+    sound: "sounds/e.wav",
     star: "star-e"
-    }
+    },
+
+    r: {
+    sound: "sounds/r.wav",
+    star: "star-r"
+    },
+
+    t: {
+    sound: "sounds/t.wav",
+    star: "star-t"
+    },
+
+    y: {
+    sound: "sounds/y.wav",
+    star: "star-y"
+    },
+
+    u: {
+    sound: "sounds/u.wav",
+    star: "star-u"
+    },
+
+    i: {
+    sound: "sounds/i.wav",
+    star: "star-i"
+    },
+
+    o: {
+    sound: "sounds/o.wav",
+    star: "star-o"
+    },
+
+    p: {
+    sound: "sounds/p.wav",
+    star: "star-p"
+    },
 };
 
 document.addEventListener("keydown", (event) => {
