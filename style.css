@@ -36,6 +36,21 @@ body {
     );
 }
 
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    
+    background:
+    radial-gradient(
+    circle at 50% 20%,
+    #4f619f 0%,
+    #3b4585 40%,
+    #29265d 75%,
+    #101240 100%
+    );
+}
+
 dialog[open] {
     background-color: var(--colour-02);
     color: var(--colour-01);
@@ -52,40 +67,3 @@ button {
 
 /* ---Visuals--- */
 
-body {
-    transition: background-color 0.5s ease;
-   
-}
-
-body {
-    min-height: 100vh;
-    margin: 0;
-    transition: background 0.8s ease;
-}
-
-.pop-image {
-    position: fixed;
-    width: 100px;
-    pointer-events: none;
-    animation: imageRise 1.5s ease-out forwards;
-}
-
-@keyframes imageRise {
-    0% {
-        transform: translateY(40px) scale(0.8);
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 1;
-    }
-
-    70% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(-120px) scale(1);
-        opacity: 0;
-    }
-}
