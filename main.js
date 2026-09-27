@@ -29,56 +29,48 @@ introModal.close();
 // const snapSound = new Audio("sounds/Asnap.mp3");
 
 
-document.addEventListener("keydown", function(event) {
+const starSounds = {
+    a: {
+    sound: "sounds/a_snap.mp3",
+    star: "star-a"
+    },
 
-    // Check if the physical keyboard key pressed is A
-    if (event.key.toLowerCase() === "a") {
-            
-        const snapSound = new Audio("sounds/a_snap.mp3");
-        snapSound.play();
+    b: {
+    sound: "sounds/b_balloon.mp3",
+    star: "star-b"
+    },
+
+    c: {
+    sound: "sounds/c_chime.mp3",
+    star: "star-c"
+    },
+
+    e: {
+    sound: "sounds/e_elephant.mp3",
+    star: "star-e"
     }
+};
 
-    if (event.key.toLowerCase() === "b") {
+document.addEventListener("keydown", (event) => {
 
-        const balloonSound = new Audio("sounds/b_balloon.mp3");
-        balloonSound.play();
-    }
+    const key = event.key.toLowerCase();
 
-    if (event.key.toLowerCase() === "c") {
+    if (!starSounds[key]) return;
 
-        const chimeSound = new Audio("sounds/c_chime.mp3");
-        chimeSound.play();
-    }
+    // play sound
+    const audio = new Audio(starSounds[key].sound);
+    audio.play();
 
-    if (event.key.toLowerCase() === "e") {
+    // finding the star
+    const star = document.getElementById(starSounds[key].star);
 
-        const elephantSound = new Audio("sounds/e_elephant.mp3");
-        elephantSound.play();
-    }
+    // flashing star
+    star.classList.add("star-active");
 
-    if (event.key.toLowerCase() === "m") {
+    setTimeout(() => {
+    star.classList.remove("star-active");
+    }, 500);
 
-        const mooSound = new Audio("sounds/m_moo.mp3");
-        mooSound.play();
-    }
-
-        if (event.key.toLowerCase() === "o") {
-
-        const owlSound = new Audio("sounds/o_owl.mp3");
-        owlSound.play();
-    }
-
-    if (event.key.toLowerCase() === "p") {
-
-        const popSound = new Audio("sounds/p_pop.mp3");
-        popSound.play();
-    }
-
-            if (event.key.toLowerCase() === "s") {
-
-        const shakeSound = new Audio("sounds/s_shake.mp3");
-        shakeSound.play();
-    }
 });
 
 
@@ -86,7 +78,16 @@ document.addEventListener("keydown", function(event) {
 // create 3 branches for each improvement, meaning total 6 branches.
 
 
-
+const starMap = {
+a: document.getElementById("star-a"),
+b: document.getElementById("star-b"),
+c: document.getElementById("star-c"),
+e: document.getElementById("star-e"),
+m: document.getElementById("star-m"),
+o: document.getElementById("star-o"),
+p: document.getElementById("star-p"),
+s: document.getElementById("star-s")
+};
 
 
 
