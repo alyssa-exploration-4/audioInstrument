@@ -44,12 +44,6 @@ document.addEventListener("keydown", function(event) {
         balloonSound.play();
     }
 
-    if (event.key.toLowerCase() === "c") {
-
-        const chimeSound = new Audio("sounds/c_chime.mp3");
-        chimeSound.play();
-    }
-
     if (event.key.toLowerCase() === "e") {
 
         const elephantSound = new Audio("sounds/e_elephant.mp3");
@@ -132,7 +126,7 @@ if (keyImages[key]) {
     m: "#8fc3ca",
     n: "#86efac",
     o: "#ff8c42",
-    p: "#f472b6",
+    p: "#99e6ff",
     q: "#facc15",
     r: "#fb7185",
     s: "#b5e48a",
@@ -151,6 +145,7 @@ const keyImages = {
     e: { src: "img/e.png", size: "180px" },
     m: { src: "img/m.png", size: "200px" },
     o: { src: "img/o.png", size: "250px" },
+    p: { src: "img/p.png", size: "230px" },
     s: { src: "img/s.png", size: "250px" },
 };
 
