@@ -209,12 +209,18 @@ button {
 
 .tree1 {
     left: 10%;
-    top: 76.5%;
+    top: 77%;
     transform: scale(1);
 }
 
 .tree2 {
-    left: 78%;
-    top: 76.5%;
+    left: 80%;
+    top: 79.5%;
+    transform: scale(0.8);
+}
+
+.tree3 {
+    left: 88%;
+    top: 68.5%;
     transform: scale(1.2);
 }
