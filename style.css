@@ -124,6 +124,17 @@ button {
     border-radius: 50%;
 }
 
+.star-active {
+    transform: scale(2);
+    background: #fff8c5;
+    box-shadow:
+    0 0 10px #fff8c5,
+    0 0 20px #fff8c5,
+    0 0 40px #fff8c5;
+    
+    transition: all 0.3s ease;
+}
+
 .stars span:nth-child(1) {
     top: 15%;
     left: 10%;
