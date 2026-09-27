@@ -137,8 +137,8 @@ button {
 }
 
 .stars span:nth-child(1) {
-    top: 15%;
-    left: 10%;
+    top: 18%;
+    left: 8%;
 }
 
 .stars span:nth-child(2) {
@@ -152,7 +152,7 @@ button {
 }
 
 .stars span:nth-child(4) {
-    top: 10%;
+    top: 18%;
     left: 45%;
 }
 
@@ -167,7 +167,7 @@ button {
 }
 
 .stars span:nth-child(7) {
-    top: 30%;
+    top: 38%;
     left: 45%;
 }
 
