@@ -148,7 +148,6 @@ if (keyImages[key]) {
 const keyImages = {
     a: { src: "img/a.png", size: "200px" },
     b: { src: "img/b.png", size: "200px" },
-    c: { src: "img/c.png", size: "200px" },
     e: { src: "img/e.png", size: "180px" },
     m: { src: "img/m.png", size: "200px" },
     o: { src: "img/o.png", size: "250px" },
