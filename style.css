@@ -122,17 +122,18 @@ button {
     height: 10px;
     background: white;
     border-radius: 50%;
+    transition: all 0.5s ease;
+    
 }
 
 .star-active {
-    transform: scale(2);
-    background: #fff8c5;
+    background: rgb(255, 255, 255);
+    transform: scale(2.5);
+
     box-shadow:
-    0 0 10px #fff8c5,
-    0 0 20px #fff8c5,
-    0 0 40px #fff8c5;
-    
-    transition: all 0.3s ease;
+    0 0 10px rgb(254, 254, 254),
+    0 0 20px rgb(98, 145, 215),
+    0 0 50px rgb(47, 18, 134);
 }
 
 .stars span:nth-child(1) {
