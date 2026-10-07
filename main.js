@@ -26,8 +26,6 @@ introModal.close();
 
 // This is the instrument ------------------------ //
 
-// const snapSound = new Audio("sounds/Asnap.mp3");
-
 
 document.addEventListener("keydown", function(event) {
 
@@ -75,6 +73,31 @@ document.addEventListener("keydown", function(event) {
     }
 });
 
+// ------ RANDOM SIZE --------
+const sizes = [50, 100, 150, 200];
+const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+
+// ---------- PITCH ----------
+    if (audio) {
+
+        if (randomSize <= 75) {
+            audio.playbackRate = 1.5; // high pitch
+        } 
+        
+        else if (randomSize <= 125) {
+            audio.playbackRate = 1.2; // slightly high
+        } 
+        
+        else if (randomSize <= 175) {
+            audio.playbackRate = 1; // normal
+        } 
+        
+        else {
+            audio.playbackRate = 0.7; // low pitch
+        }
+
+        audio.play();
+    }
 
 // two different areas for imporvement, 1. the aesthetic & visuals 2. randomness.
 // create 3 branches for each improvement, meaning total 6 branches.
@@ -97,7 +120,7 @@ if (keyImages[key]) {
         image.style.width = keyImages[key].size;
         image.classList.add("pop-image");
 
-        // adjust the position on screen
+// position on screen
         image.style.left = Math.random() * 80 + 10 + "vw";
         image.style.top = Math.random() * 60 + 20 + "vh";
 
@@ -108,6 +131,24 @@ if (keyImages[key]) {
             image.remove();
         }, 1500);
     }
+
+
+
+
+const audio = new Audio(keySounds[key]);
+
+if (randomSize <= 75) {
+    audio.playbackRate = 1.5; // high
+} else if (randomSize <= 125) {
+    audio.playbackRate = 1.2; // slightly high
+} else if (randomSize <= 175) {
+    audio.playbackRate = 1; // normal
+} else {
+    audio.playbackRate = 0.7; // low
+}
+
+audio.play();
+
 });
 
  const keyColours = {
