@@ -32,7 +32,7 @@ document.addEventListener("keydown", function(event) {
     const key = event.key.toLowerCase();
 
 // ------ RANDOM SIZE --------
-const sizes = [50, 100, 150, 200];
+const sizes = [80, 150, 300];
 const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
 
 // ------ AUDIO --------
@@ -68,104 +68,54 @@ const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
     }
 
     // ---------- PITCH ----------
-    if (audio) {
+if (audio) {
 
-        if (randomSize <= 75) {
-            audio.playbackRate = 1.5; // high pitch
-        } 
-        
-        else if (randomSize <= 125) {
-            audio.playbackRate = 1.2; // slightly high
-        } 
-        
-        else if (randomSize <= 175) {
-            audio.playbackRate = 1; // normal
-        } 
-        
-        else {
-            audio.playbackRate = 0.7; // low pitch
-        }
-
-        audio.play();
+    if (randomSize <= 80) {
+        audio.playbackRate = 1.5; // high pitch
+    } 
+    
+    else if (randomSize <= 150) {
+        audio.playbackRate = 1; // normal pitch
+    } 
+    
+    else {
+        audio.playbackRate = 0.7; // low pitch
     }
+
+    audio.play();
+}
 
 //---------- COLOUR CHANGING ---------
 
-document.addEventListener("keydown", (event) => {
-    const key = event.key.toLowerCase();
-}
-    
-
-    // Check if the physical keyboard key pressed is A
-    if (event.key.toLowerCase() === "a") {
-            
-        const snapSound = new Audio("sounds/a_snap.mp3");
-        snapSound.play();
+    if (keyColours[key]) {
+        document.body.style.backgroundColor = keyColours[key];
     }
 
-    if (event.key.toLowerCase() === "b") {
+//--------- IMAGE APPEARING -------
+    if (keyImages[key]) {
 
-        const balloonSound = new Audio("sounds/b_balloon.mp3");
-        balloonSound.play();
-    }
-
-    if (event.key.toLowerCase() === "e") {
-
-        const elephantSound = new Audio("sounds/e_elephant.mp3");
-        elephantSound.play();
-    }
-
-    if (event.key.toLowerCase() === "m") {
-
-        const mooSound = new Audio("sounds/m_moo.mp3");
-        mooSound.play();
-    }
-
-        if (event.key.toLowerCase() === "o") {
-
-        const owlSound = new Audio("sounds/o_owl.mp3");
-        owlSound.play();
-    }
-
-    if (event.key.toLowerCase() === "p") {
-
-        const popSound = new Audio("sounds/p_pop.mp3");
-        popSound.play();
-    }
-
-            if (event.key.toLowerCase() === "s") {
-
-        const shakeSound = new Audio("sounds/s_shake.mp3");
-        shakeSound.play();
-    }
-});
-
-
-
-
-//---- IMAGE APPEARING -------
-if (keyImages[key]) {
         const image = document.createElement("img");
         image.src = keyImages[key].src;
+
 // SIZE
         image.style.width = randomSize + "px";
         image.classList.add("pop-image");
 
-// POSITION ON SCREEN
+
+// RANDOM POSITION
         image.style.left = Math.random() * 80 + 10 + "vw";
         image.style.top = Math.random() * 60 + 20 + "vh";
 
         document.body.appendChild(image);
 
-// fade after animation
+
+// FADE OUT
         setTimeout(() => {
             image.remove();
         }, 1500);
     }
 
-// if (keyColours[key]) {
-// document.body.style.backgroundColor = keyColours[key];
-// }
+});
 
 
  const keyColours = {
