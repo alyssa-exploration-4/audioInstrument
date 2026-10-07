@@ -106,30 +106,29 @@ document.addEventListener("keydown", (event) => {
 }
 
 
-if (keyColours[key]) {
-document.body.style.backgroundColor = keyColours[key];
-}
-
 //---- IMAGE APPEARING -------
 if (keyImages[key]) {
         const image = document.createElement("img");
-
         image.src = keyImages[key].src;
-        image.style.width = keyImages[key].size;
+// SIZE
+        image.style.width = randomSize + "px";
         image.classList.add("pop-image");
 
-// position on screen
+// POSITION ON SCREEN
         image.style.left = Math.random() * 80 + 10 + "vw";
         image.style.top = Math.random() * 60 + 20 + "vh";
 
         document.body.appendChild(image);
 
-        // fade after animation
+// fade after animation
         setTimeout(() => {
             image.remove();
         }, 1500);
     }
 
+if (keyColours[key]) {
+document.body.style.backgroundColor = keyColours[key];
+}
 
 
  const keyColours = {
