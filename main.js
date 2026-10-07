@@ -99,20 +99,18 @@ const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
         audio.play();
     }
 
-// two different areas for imporvement, 1. the aesthetic & visuals 2. randomness.
-// create 3 branches for each improvement, meaning total 6 branches.
-
-//----------colour change---------
+//---------- COLOUR CHANGING ---------
 
 document.addEventListener("keydown", (event) => {
     const key = event.key.toLowerCase();
+}
 
 
 if (keyColours[key]) {
 document.body.style.backgroundColor = keyColours[key];
 }
 
-//---- image appearing -------
+//---- IMAGE APPEARING -------
 if (keyImages[key]) {
         const image = document.createElement("img");
 
@@ -133,23 +131,6 @@ if (keyImages[key]) {
     }
 
 
-
-
-const audio = new Audio(keySounds[key]);
-
-if (randomSize <= 75) {
-    audio.playbackRate = 1.5; // high
-} else if (randomSize <= 125) {
-    audio.playbackRate = 1.2; // slightly high
-} else if (randomSize <= 175) {
-    audio.playbackRate = 1; // normal
-} else {
-    audio.playbackRate = 0.7; // low
-}
-
-audio.play();
-
-});
 
  const keyColours = {
     a: "#ff9ea1",
